@@ -1,0 +1,3 @@
+#!name=自用签到
+[Mitm]
+hostname = app.bilibili.com, grpc.biliapi.net,app.bilibili.com, m.bilibili.com, mobile.ximalaya.com, 180.153.255.*, 180.153.250.*, 180.153.140.*, 114.80.99.*, 114.80.139.*, 114.80.161.*, 1.62.62.64, 61.172.194.184,passport.iqiyi.com
