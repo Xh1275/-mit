@@ -1,3 +1,4 @@
 #!name=自用签到
+#!desc=该模块适用于定时签到脚本的Cookie获取. 集成: BiliBili, 喜马拉雅;爱奇艺; 您可以在使用后手动将其禁用，以免产生不必要的MITM.
 [Mitm]
 hostname = app.bilibili.com, grpc.biliapi.net,app.bilibili.com, m.bilibili.com, mobile.ximalaya.com, 180.153.255.*, 180.153.250.*, 180.153.140.*, 114.80.99.*, 114.80.139.*, 114.80.161.*, 1.62.62.64, 61.172.194.184,passport.iqiyi.com
