@@ -6,8 +6,6 @@
 
 # > 小红书开屏广告@chouchoui
 http-response ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config requires-body=1,script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/xiaohongshu/xiaohongshu.ad.js
-#微信url限制解除
-http-response ^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi requires-body=1,script-path=https://raw.githubusercontent.com/HotKids/Rules/master/Script/weixin110.js
 
 [URL Rewrite]
 # ======= 0~9 ======= #
@@ -80,4 +78,4 @@ https://api-mifit-sg2.huami.com/discovery/mi/cards/homepage_ad\? reject
 ^https:\/\/gw.alicdn.com\/tps\/.+\d{3,4}-\d{4} reject
 
 [MITM]
-hostname =mp.weixin.qq.com, security.wechat.com, weixin110.qq.com,www.meituan.com, *.music.163.com, *.58cdn.com.cn, app.58.com,www.xiaohongshu.com,otheve.beacon.qq.com,s3plus.meituan.net,flowplus.meituan.net, p*.meituan.net, img.meituan.net,wmapi.meituan.com, appconf.mail.163.com,api-mifit.huami.com, api.jr.mi.com, api.m.mi.com,pages.xiaohongshu.com,edith.xiaohongshu.com,gw.alicdn.com,business.msstatic.com, mangaapi.manhuaren.com,
+hostname =mp.weixin.qq.com, security.wechat.com, www.meituan.com, *.music.163.com, *.58cdn.com.cn, app.58.com,www.xiaohongshu.com,otheve.beacon.qq.com,s3plus.meituan.net,flowplus.meituan.net, p*.meituan.net, img.meituan.net,wmapi.meituan.com, appconf.mail.163.com,api-mifit.huami.com, api.jr.mi.com, api.m.mi.com,pages.xiaohongshu.com,edith.xiaohongshu.com,gw.alicdn.com,business.msstatic.com, mangaapi.manhuaren.com,
