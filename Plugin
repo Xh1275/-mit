@@ -1,4 +1,13 @@
 #!name=自用签到
 #!desc=该模块适用于定时签到脚本的Cookie获取. 集成: BiliBili, 喜马拉雅;爱奇艺; 您可以在使用后手动将其禁用，以免产生不必要的MITM.
 [Mitm]
-hostname = app.bilibili.com, grpc.biliapi.net,app.bilibili.com, m.bilibili.com, mobile.ximalaya.com, 180.153.255.*, 180.153.250.*, 180.153.140.*, 114.80.99.*, 114.80.139.*, 114.80.161.*, 1.62.62.64, 61.172.194.184,passport.iqiyi.com
+hostname = app.bilibili.com, grpc.biliapi.net,app.bilibili.com, m.bilibili.com, mobile.ximalaya.com, 180.153.255.*, 180.153.250.*, 180.153.140.*, 114.80.99.*, 114.80.139.*, 114.80.161.*, 1.62.62.64, 61.172.194.184,passport.iqiyi.com,api.m.jd.com, ms.jr.jd.com, me-api.jd.com, app.bilibili.com, c.tieba.baidu.com,
+
+[Script]
+http-request ^https:\/\/(api\.m|me-api|ms\.jr)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?|gw\/generic\/hy\/h5\/m\/appSign\?) script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, requires-body=1, tag=京东签到Cookie
+
+http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, tag=爱奇艺Cookie
+
+http-request ^https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js, tag=百度贴吧Cookie
+
+http-request ^https?:\/\/mobile\.ximalaya\.com\/app-skin-service\/skin\/ script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/xmlySign.js, timeout=10, tag=喜马拉雅获取cookie
