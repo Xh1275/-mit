@@ -8,7 +8,7 @@ hostname = *.music.163.com
 
 [Script]
 # 播放器会员皮肤
-^https:\/\/interface3\.music\.163\.com\/eapi\/playermode\/ url script-request-header https://github.com/Xh1275/-mit/blob/main/wyy.plugin
+http-request ^https:\/\/interface3\.music\.163\.com\/eapi\/playermode\/ script-path=https://github.com/Xh1275/-mit/blob/main/wyy.js,timeout=10, enabled=false, tag=播放器会员皮肤
 
 # 搜索结果会员歌曲
 ^https:\/\/interface3\.music\.163\.com\/eapi\/search\/complex\/(page|rec\/song\/get) url script-request-header https://github.com/Xh1275/-mit/blob/main/wyy.plugin
