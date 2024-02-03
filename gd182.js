@@ -6,7 +6,7 @@
 自动签到 地图APP/微信小程序、支付宝小程序
 由于不懂JS，代码是硬堆的
 
-环境变量     GD_Va3 = '{"userId":"xx","adiu":"xx","sessionid":"xx"}'
+环境变量     GD_Va3 = '{"userId":1417378428,"adiu":"oagXW5AYq5JkFSQd-TiJ2ZB3AwAs","sessionid":"iecn66gqdrch5msot6fvmniih4rsx3kj"}'
 
 ======调试区|忽略======
 # ^https:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=) url script-response-body http://192.168.2.170:8080/ampDache.js
