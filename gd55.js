@@ -32,14 +32,14 @@ var message1 = '';
     indMD5();
 
     message1 += `----------高德抢券----------\n`;
-    let {code,data,message} = await checkIn();
-    if(code==1 && data?.rushBuyList.length>= 2 ){
-    let buyId;
-      for (let i = 0; i < data.rushBuyList.length; i++) {
-         if (data.rushBuyList[i].title === "打车秒杀5元券") {
-           buyId = data.rushBuyList[i].id;
-           message1 += 查券:${data?.rushBuyList[i]?.title} - ${data?.rushBuyList[i]?.buttonText}\n;
-                break;
+      let {code,data,message} = await checkIn();
+      if(code==1 && data?.rushBuyList.length>= 2 ){
+      let buyId;
+        for (let i = 0; i < data.rushBuyList.length; i++) {
+          if (data.rushBuyList[i].title === "打车秒杀5元券") {
+              buyId = data.rushBuyList[i].id;
+              message1 += 查券:${data?.rushBuyList[i]?.title} - ${data?.rushBuyList[i]?.buttonText}\n;
+              break;
             }
         }
         if(buyId > 0 && data?.rushBuyList.find(item => item.id === buyId)?.status < 3){
