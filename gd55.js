@@ -16,8 +16,8 @@ Cookie获取/签到用这个脚本：https://raw.githubusercontent.com/wf021325/
  */
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-const $ = new Env("高德抢券");
-const _key = 'GD_Val';
+const $ = new Env("高德155抢券");
+const _key = 'GD_Va2';
 var gdVal = $.getdata(_key) || ($.isNode() ? process.env[_key] : '');
 $.is_debug = ($.isNode() ? process.env.IS_DEDUG : $.getdata('is_debug')) || 'false';//false-true
 var message1 = '';
@@ -32,17 +32,17 @@ var message1 = '';
     indMD5();
 
     message1 += `----------高德抢券----------\n`;
-      let {code,data,message} = await checkIn();
-      if(code==1 && data?.rushBuyList.length>= 2 ){
-      let buyId;
-        for (let i = 0; i < data.rushBuyList.length; i++) {
-          if (data.rushBuyList[i].title === "打车秒杀5元券") {
-              buyId = data.rushBuyList[i].id;
-              message1 += 查券:${data?.rushBuyList[i]?.title} - ${data?.rushBuyList[i]?.buttonText}\n;
-              break;
-            }
+    let {code,data,message} = await checkIn();
+    if(code==1 && data?.rushBuyList.length>=2){
+        let buyId;
+           for (let i = 0; i < data.rushBuyList.length; i++) {
+               if (data.rushBuyList[i].title === "打车秒杀5元券") {
+                buyId = data.rushBuyList[i].id;
+        message1 += `查券:${data?.rushBuyList[i]?.title} - ${data?.rushBuyList[i]?.buttonText}\n`;
+        break;
         }
-        if(buyId > 0 && data?.rushBuyList.find(item => item.id === buyId)?.status < 3){
+        }
+        if(buyId > 0 && data?.rushBuyList[3]?.status<3){
             let a = $.getdata('gdgdgd') || 50;
             for (let i = 0; i < a; i++) {
                 let {code,data,cnMessage} = await signIn(buyId);
