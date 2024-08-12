@@ -18,8 +18,8 @@ Cookie获取/签到用这个脚本：https://raw.githubusercontent.com/wf021325/
  */
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-const $ = new Env("高德抢券");
-const _key = 'GD_Val';
+const $ = new Env("高德182抢券");
+const _key = 'GD_Va4';
 var gdVal = $.getdata(_key) || ($.isNode() ? process.env[_key] : '');
 $.is_debug = ($.isNode() ? process.env.IS_DEDUG : $.getdata('is_debug')) || 'false';//false-true
 var message1 = '';
@@ -45,7 +45,7 @@ var message1 = '';
                         }
                 });
                 if ($.status < 3) {// <3  调试>8  防止活动未开始频繁提交
-                        let a = $.getdata('gdgdgd') || 50;//抢购次数，默认50
+                        let a = $.getdata('gdgdgd') || 5;//抢购次数，默认50
                         for (let i = 0; i < a; i++) {
                                 let {code, data, cnMessage} = await signIn($.buyId);
                                 if (code == 1) {
